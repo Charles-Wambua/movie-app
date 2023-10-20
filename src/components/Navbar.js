@@ -19,7 +19,7 @@ function Navbar() {
         <div className="links">
           <a href="" className="nav-link">Home</a>
           <a
-            href="https://github.com/Charles-Wambua"
+            href="https://github.com/Charles-Wambua/movie-app"
             target="_blank"
             rel="noopener noreferrer"
           >
