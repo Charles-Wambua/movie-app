@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import axiosJsonp from "axios-jsonp";
 import axios from "axios";
 import { Card } from "react-bootstrap";
 import "./css/SearchMovies.css";
@@ -13,18 +14,21 @@ const SearchMovies = () => {
 
   const handleSearch = async () => {
     setLoading(true);
-    try {
-      const response = await axios.get(apiUrl, {
-        params: {
-          s: searchTerm,
-        },
+    axiosJsonp({
+      url: apiUrl,
+      callbackFunction: "callback",
+      params: {
+        s: searchTerm,
+      },
+    })
+      .then((response) => {
+        setLoading(false);
+        setSearchResults(response.data.Search || []);
+      })
+      .catch((error) => {
+        setLoading(false);
+        console.error("Error occurred:", error);
       });
-      setSearchResults(response.data.Search || []);
-      setLoading(false);
-    } catch (error) {
-      console.error("Error occuured:", error);
-      setLoading(false);
-    }
   };
 
   // const handleGenreClick = async (genre) => {
@@ -78,7 +82,6 @@ const SearchMovies = () => {
                 <Card.Img variant="top" src={movie.Poster} />
                 <Card.Body>
                   <Card.Title>
-                
                     <a
                       href=""
                       style={{
