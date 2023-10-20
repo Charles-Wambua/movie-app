@@ -5,7 +5,7 @@ import { Card } from "react-bootstrap";
 import "./css/SearchMovies.css";
 // import Genres from "./Genres";
 
-const apiUrl = "http://www.omdbapi.com/?apikey=ba939b94";
+const apiUrl = "https://www.omdbapi.com/?apikey=ba939b94";
 
 const SearchMovies = () => {
   const [searchTerm, setSearchTerm] = useState("");
