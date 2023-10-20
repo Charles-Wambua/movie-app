@@ -1,0 +1,44 @@
+.all-genres {
+    position: absolute;
+    top: 15%;
+    right: 20%;
+    z-index: 2;
+    background-color: rgba(51, 44, 44, 0.7);
+    color: white;
+    border: 1px solid #777;
+    border-radius: 5px;
+}
+
+.false {
+    display: none;
+}
+
+.true {
+    display: block;
+    
+}
+
+.all-genres ul {
+    list-style: none;
+    padding-right: 10px;
+}
+
+.all-genres li {
+    padding: 10px;
+    cursor: pointer;
+}
+
+.all-genres li:hover {
+    border-radius: 10px;
+    padding-left: 10px;
+    background-color: #555;
+}
+
+@media (max-width: 768px) {
+    .all-genres {
+        position: absolute;
+        top: 10%;
+        right: 2%;
+        z-index: 2;
+    }
+}

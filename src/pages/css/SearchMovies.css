@@ -1,0 +1,71 @@
+.foundmovies {
+  display: flex;
+  flex-direction: row;
+  overflow-x: auto;
+  background-color: black;
+  color: aliceblue;
+  align-items: center;
+  justify-content: center;
+  padding-left: 350px;
+}
+.inn {
+  background-color: black;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+.input-tab {
+  padding: 10px;
+  font-size: 16px;
+  border: 2px solid #323941;
+  border-radius: 5px;
+  outline: none;
+}
+
+.input-tab::placeholder {
+  color: #e8e2e2;
+}
+
+.inn button {
+  padding: 10px 20px;
+  font-size: 16px;
+  border-radius: 5px;
+  cursor: pointer;
+  outline: none;
+  background-color: #3a4d61;
+  color: #fff;
+  border: none;
+}
+
+.moviecards {
+  background-color: rgba(57, 48, 48, 0.7);
+  margin-left: 20px;
+  margin: 10px;
+  padding: 10px;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.searchinput {
+  background-color: rgba(27, 15, 15, 0.7);
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding: 10px;
+}
+.input-tab {
+  align-self: center;
+  background-color: rgb(143, 143, 168);
+  color: white;
+  padding: 10px;
+}
+@media (max-width: 744px) {
+  .foundmovies {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    padding-left: 0;
+  }
+}
