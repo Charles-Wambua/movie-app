@@ -9,14 +9,6 @@
     border-radius: 5px;
 }
 
-.false {
-    display: none;
-}
-
-.true {
-    display: block;
-    
-}
 
 .all-genres ul {
     list-style: none;
@@ -26,6 +18,8 @@
 .all-genres li {
     padding: 10px;
     cursor: pointer;
+    line-height: 10px;
+
 }
 
 .all-genres li:hover {

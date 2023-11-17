@@ -5,19 +5,18 @@ import { Link } from "react-router-dom";
 
 const apiUrl = "http://www.omdbapi.com/?apikey=ba939b94";
 
-const Movies = () => {
+const Series = () => {
   const [movies, setMovies] = useState([]);
   const [loading, setLoading] = useState(false);
 
   useEffect(() => {
     setLoading(true);
     axios
-      .get(`${apiUrl}&s=random&type=movie`)
+      .get(`${apiUrl}&s=popular&type=series`)
       .then((response) => {
         setLoading(false);
         const randomMovies = displayrandomly(response.data.Search || []);
         setMovies(randomMovies);
-        // console.log(movies)
       })
       .catch((error) => {
         setLoading(false);
@@ -51,7 +50,7 @@ const Movies = () => {
           fontfamily: 'poppinsemilight'
         }}
       >
-        Top movies to watch
+        Best series movies
       </p>
       <hr />
       <div className="movie-container">
@@ -79,4 +78,4 @@ const Movies = () => {
   );
 };
 
-export default Movies;
+export default Series;

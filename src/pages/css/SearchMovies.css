@@ -1,13 +1,4 @@
-.foundmovies {
-  display: flex;
-  flex-direction: row;
-  overflow-x: auto;
-  background-color: black;
-  color: aliceblue;
-  align-items: center;
-  justify-content: center;
-  padding-left: 350px;
-}
+
 .inn {
   background-color: black;
   display: flex;
@@ -27,7 +18,12 @@
 .input-tab::placeholder {
   color: #e8e2e2;
 }
-
+.searchinput{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  /* flex-direction: row; */
+}
 .inn button {
   padding: 10px 20px;
   font-size: 16px;
@@ -39,17 +35,58 @@
   border: none;
 }
 
-.moviecards {
-  background-color: rgba(57, 48, 48, 0.7);
-  margin-left: 20px;
+.movie-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  flex-direction: row;
+}
+.found{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  /* flex-direction: row; */
+}
+
+.movie-card {
+  width: 200px;
   margin: 10px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  overflow: hidden;
+  transition: transform 0.3s ease-in-out;
+  
+}
+
+.movie-card:hover {
+  transform: scale(1.05);
+}
+
+.movie-poster {
+  width: 100%;
+  height: auto;
+}
+
+.movie-details {
   padding: 10px;
-  align-items: center;
-  justify-content: center;
   text-align: center;
 }
 
+.movie-title {
+  font-size: 1.2rem;
+  font-weight: bold;
+  font-family: 'poppinsemibold';
+}
+
+.movie-year {
+  color: #b31b1b;
+}
+
+
+
 .searchinput {
+  display: flex;
+  flex-direction: row;
   background-color: rgba(27, 15, 15, 0.7);
   padding-top: 10px;
   padding-bottom: 10px;
@@ -61,11 +98,55 @@
   color: white;
   padding: 10px;
 }
+@media screen and (max-width: 767px) {
+  .movie-card {
+    width: calc(100% - 70%); 
+    margin: 5px;
+  }
+  .movie-title{
+    font-size: calc(100% - 30%);
+  }
+}
 @media (max-width: 744px) {
-  .foundmovies {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    padding-left: 0;
+ 
+}
+.spinner-cont{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.spinner {
+  width: 36px;
+  height: 36px;
+  display: grid;
+  border: 4.5px solid #0000;
+  border-radius: 50%;
+  border-color: #dbdcef #0000;
+  animation: spinner-e04l1k 1s infinite linear;
+}
+
+.spinner::before,
+.spinner::after {
+  content: "";
+  grid-area: 1/1;
+  margin: 2.2px;
+  border: inherit;
+  border-radius: 50%;
+}
+
+.spinner::before {
+  border-color: #ff474a #0000;
+  animation: inherit;
+  animation-duration: 0.5s;
+  animation-direction: reverse;
+}
+
+.spinner::after {
+  margin: 8.9px;
+}
+
+@keyframes spinner-e04l1k {
+  100% {
+     transform: rotate(1turn);
   }
 }
