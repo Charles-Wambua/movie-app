@@ -3,7 +3,7 @@ import axios from "axios";
 import "./css/Movies.css";
 import { Link } from "react-router-dom";
 
-const apiUrl = "http://www.omdbapi.com/?apikey=ba939b94";
+const apiUrl = "https://www.omdbapi.com/?apikey=ba939b94";
 
 const Movies = () => {
   const [movies, setMovies] = useState([]);
@@ -21,8 +21,8 @@ const Movies = () => {
       })
       .catch((error) => {
         setLoading(false);
-        alert("An error occured, please try again later");
-        console.error("Error fetching movies:", error);
+        alert("An error occured", error);
+        console.error("Error fetching movies");
       });
   }, []);
 
