@@ -6,14 +6,15 @@ function Footer() {
       style={{
         display: "flex",
         flexDirection: "row",
-        backgroundColor: "black",
+        backgroundColor: "rgba(34, 34, 34, 0.8",
         color: "white",
         justifyContent: "space-evenly",
         paddingTop: "20px",
         paddingBottom: "20px",
-        position: "fixed",
+        position:"fixed",
         bottom: "0",
         width: "100%",
+       
         alignItems: "center",
       }}
     >
